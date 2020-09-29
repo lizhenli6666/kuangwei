@@ -39,8 +39,7 @@ var JDSwiper = /*#__PURE__*/function () {
         opacity: 0
       }); //页码增加
 
-      _this.pageNum--;
-      console.log(_this.pageNum);
+      _this.pageNum--; // console.log(this.pageNum);
 
       if (_this.pageNum == -1) {
         _this.pageNum = _this.oLis.length - 1;
@@ -78,8 +77,8 @@ var JDSwiper = /*#__PURE__*/function () {
         //this.pageNum  li 隐藏
         animate(_this.oLis[_this.pageNum], {
           opacity: 0
-        });
-        console.log(i);
+        }); // console.log(i);
+
         _this.pageNum = i; // li 显示
 
         animate(_this.oLis[_this.pageNum], {
@@ -87,9 +86,8 @@ var JDSwiper = /*#__PURE__*/function () {
         });
 
         _this.showPagePointWithNum(); //
+        // console.log(this);
 
-
-        console.log(_this);
       };
     });
   } // 播放一页
@@ -98,15 +96,14 @@ var JDSwiper = /*#__PURE__*/function () {
   _createClass(JDSwiper, [{
     key: "next",
     value: function next() {
-      console.log(this.pageNum); //
+      // console.log(this.pageNum);
+      //
       // this.oLis[this.pageNum].style.opacity = 0
-
       animate(this.oLis[this.pageNum], {
         opacity: 0
       }); //页码增加
 
-      this.pageNum++;
-      console.log(this.pageNum);
+      this.pageNum++; // console.log(this.pageNum);
 
       if (this.pageNum == this.oLis.length) {
         this.pageNum = 0;
